@@ -5,6 +5,7 @@
   padding: 0;
   margin: 0;
   font-family: "Instrument Sans", sans-serif;
+  scroll-behavior: smooth;
 }
 
 .header-container {
@@ -18,6 +19,10 @@
   background-color: rgb(17, 112, 221);
 }
 
+#btn-mobile {
+  display: none;
+}
+
 .header-logo {
   width: 40%;
   display: flex;
@@ -27,8 +32,8 @@
 }
 
 .header-logo i {
-  color: rgb(255, 255, 255);
-  font-size: 1.7em;
+  color: white;
+  font-size: 2em;
 }
 
 .header-ul {
@@ -40,6 +45,16 @@
 .header-ul a {
   list-style: none;
   text-decoration: none;
+  font-size: 3em;
+  padding-right: 3em;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  transition: linear 0.3s;
+  display: block;
+}
+
+.header-ul a:hover {
+  color: black;
 }
 
 /*ARRUMAR A HEADER - RESPONSIDIVDADE*/
@@ -164,4 +179,28 @@ main button {
 .art1 {
   float: left;
   width: 33%;
+}
+
+@media (max-width: 500px) {
+  #btn-mobile {
+    display: block;
+  }
+
+  .header-ul {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 12em;
+    background-color: rgb(17, 112, 221);
+    z-index: 1000;
+  }
+
+  .header-nav.active .header-ul {
+    display: block;
+  }
+
+  .header-ul a {
+    padding: 2em;
+  }
 }
