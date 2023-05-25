@@ -14,9 +14,12 @@
   display: flex;
   position: fixed;
   top: 0;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   background-color: rgb(17, 112, 221);
+}
+
+.header-nav {
 }
 
 #btn-mobile {
@@ -24,11 +27,7 @@
 }
 
 .header-logo {
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin-left: 1em;
 }
 
 .header-logo i {
@@ -45,7 +44,7 @@
 .header-ul a {
   list-style: none;
   text-decoration: none;
-  font-size: 3em;
+  font-size: 5em;
   padding-right: 3em;
   color: rgb(255, 255, 255);
   cursor: pointer;
@@ -64,8 +63,8 @@ main {
 }
 
 main img {
-  width: 50%;
-  border-radius: 40%;
+  width: 12em;
+  border-radius: 50%;
   margin: 4em auto 1em;
   display: block;
 }
@@ -101,10 +100,20 @@ main button {
   display: block;
   font-size: 1.1em;
   background-color: rgb(17, 112, 221);
-  border-radius: 1em;
-  border: 1px solid white;
+  border-radius: 0.7em;
+  border: 1px transparent;
   text-align: center;
   color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+main button:hover {
+  background-color: rgb(70, 144, 228);
+}
+
+main a {
+  list-style: none;
+  text-decoration: none;
 }
 
 .icon {
@@ -119,10 +128,34 @@ main button {
 }
 
 .icon i {
-  padding-right: 0.8em;
+  padding: 0.2em;
+  margin-right: 0.5em;
   color: black;
 }
 
+.fa-linkedin,
+.fa-github,
+.fa-whatsapp {
+  border: 1px solid transparent;
+  border-radius: 0.1em;
+  background-color: rgb(245, 238, 238);
+  transition: 0.5s;
+}
+
+.fa-linkedin:hover {
+  background-color: rgb(111, 111, 218);
+  transform: scale(1.1);
+}
+
+.fa-github:hover {
+  background-color: rgb(107, 107, 107);
+  transform: scale(1.1);
+}
+
+.fa-whatsapp:hover {
+  background-color: rgb(148, 233, 20);
+  transform: scale(1.1);
+}
 /*COLOCAR LINKS NOS NAVS E FIM DO MAIN*/
 
 #section-sobre {
@@ -135,6 +168,17 @@ main button {
   margin-bottom: 1.2em;
   color: rgb(17, 112, 221);
   font-size: 2em;
+  text-align: center;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 5em;
+  height: 0.1em;
+  background: currentColor;
+  border-radius: 10px;
+  margin: 0 auto;
 }
 
 #section-sobre p {
@@ -148,10 +192,7 @@ main button {
 .btn-div {
   width: 100%;
   height: 8em;
-  margin: 2em 0 9.9em 3em;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  margin: 0 auto;
 }
 
 .btn-my {
@@ -181,26 +222,69 @@ main button {
   width: 33%;
 }
 
-@media (max-width: 500px) {
-  #btn-mobile {
-    display: block;
-  }
-
+@media (max-width: 720px) {
   .header-ul {
-    display: none;
+    display: block;
     position: absolute;
     width: 100%;
-    height: 100vh;
+    height: 0;
     top: 12em;
     background-color: rgb(17, 112, 221);
     z-index: 1000;
+    transition: linear 0.5s;
+    visibility: hidden;
+    overflow-y: hidden;
   }
 
   .header-nav.active .header-ul {
-    display: block;
+    height: 100vh;
+    visibility: visible;
+    overflow-y: auto;
   }
 
   .header-ul a {
     padding: 2em;
+  }
+
+  #btn-mobile {
+    display: flex;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: 0.5em;
+  }
+
+  #hamburger {
+    color: white;
+    width: 20px;
+    border-top: 2px solid;
+  }
+
+  #hamburger::after,
+  #hamburger::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+    margin-top: 5px;
+    position: relative;
+  }
+
+  .header-nav.active #hamburger {
+    border-top-color: transparent;
+  }
+
+  .header-nav.active #hamburger::after {
+    transform: rotate(135deg);
+    transition: 0.2s;
+  }
+
+  .header-nav.active #hamburger::before {
+    transform: rotate(-135deg);
+    top: 7px;
+    transition: 0.2s;
   }
 }
