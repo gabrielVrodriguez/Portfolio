@@ -1,125 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfólio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfólio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
-</head>
-
-<body>
-  <header class="header-container">
-    <div class="header-logo">
-      <i class="fa-solid fa-ghost"></i>
-    </div>
-
-    <nav class="header-nav">
-      <button id="btn-mobile"><span id="hamburger"></span></button>
-      <ul class="header-ul">
-        <li ><a href="#imagem-principal">Home</a></li>
-        <li><a href="#section-sobre">Sobre mim</a></li>
-        <li><a href="#conhecimentos">Conhecimentos</a></li>
-        <li><a href="#projeto">Projetos</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <div class="division"></div>
-
-  <main>
-
-      <img id="imagem-principal" src="./img/perfil.jpeg" />
-
-    <div class="main-text">
-      <p>Hello, World <i class="fa-solid fa-earth-americas"></i></p>
-      <h1>Eu sou um <br> <strong class="str">Desenvolvedor Web</strong></h1>
-      <p id="p-two">Bem vindo ao meu website portfólio</p>
-    </div>
-
-  
-    <a href="#section-sobre"><button>Mais sobre mim</button></a>
-   
-    <nav class="icon">
-      <a target="_blank" href="https://www.linkedin.com/in/gabriel-rodriguez-92567b260/"><i class="fa-brands fa-linkedin"></i></a>
-      <a target="_blank" href="https://wa.me/13991498176"><i class="fa-brands fa-whatsapp"></i></a>
-      <a target="_blank" href="https://github.com/gabrielVrodriguez"><i class="fa-brands fa-github" ></i></a>
-    </nav>
-  </main>
-
-  <section class="section-a-c">
-    <div id="section-sobre">
-      <h2>Quem sou eu ?</h2>
-      <p>
-        Olá! Me chamo Gabriel, tenho 20 anos e estou no meu 2º semestre de
-        Análise e Desenvolvimento de Sistemas. Atualmente, tenho experiência
-        em projetos acadêmicos e pessoais, onde pude aplicar meus
-        conhecimentos em HTML, CSS e JavaScript, estou em processo de
-        desenvolviment e no futuro desejo me tornar um Full Stack Developer.
-        Logo abaixo, você poderá ver alguns dos meus projetos e as respectivas
-        tecnologias utilizadas.
-      </p>
-
-      <p class="p-case">Caso queira saber um pouco mais sobre mim,
-        confira o meu currículo logo abaixo.</p>
-
-      <div class="btn-div">
-        <button class="btn-my" href="#">
-          <i class="fa-regular fa-file-pdf"></i>Meu currículo
-        </button>
-        <button class="btn-my" href="#">
-          <i class="fa-solid fa-magnifying-glass"></i>Meus projetos
-        </button>
+  <body>
+    <header class="header-container">
+      <div class="header-logo">
+        <i class="fa-solid fa-ghost"></i>
       </div>
-    </div>
 
-    <div class="section-conhecimentos">
-      <h3>Conhecimentos</h3>
-    </div>
-  </section>
+      <nav class="header-nav">
+        <button id="btn-mobile"><span id="hamburger"></span></button>
+        <ul class="header-ul">
+          <li><a href="#hello">Home</a></li>
+          <li><a href="#section-sobre">Sobre mim</a></li>
+          <li><a href="#conhecimentos">Conhecimentos</a></li>
+          <li><a href="#projeto">Projetos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <section class="section-projetos">
-    <h4 id="projeto">Meus Projetos</h2>
+    <main id="hello">
+      <div class="main-text">
+        <p>Hello, World <i class="fa-solid fa-earth-americas"></i></p>
+        <h1 class="title">
+          Eu sou um <br />
+          <strong class="str">Desenvolvedor Web</strong>
+        </h1>
+        <p id="p-two">Bem vindo ao meu website portfólio</p>
 
-      <div class="box-1">Login Page</div>
-      <div class="box-2">Calculadora-IMC</div>
-      <div class="box-3">Loading....</div>
-      <div class="box-4">Loading....</div>
-  </section>
+        <a href="#section-sobre"><button>Mais sobre mim</button></a>
 
-  <section class="section-contato">
-    <div class="section-contato-text">
-      <h5 id="contato">Contate-me</h3>
+        <nav class="icon">
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/gabriel-rodriguez-92567b260/"
+            ><i class="fa-brands fa-linkedin" ></i
+          ></a>
+          <a target="_blank" href="https://wa.me/13991498176"
+            ><i class="fa-brands fa-whatsapp"></i
+          ></a>
+          <a target="_blank" href="https://github.com/gabrielVrodriguez"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+        </nav>
+      </div>
+
+      <div class="box-image">
+        <img src="./img/perfil.jpeg" />
+      </div>
+    </main>
+
+    <section class="section-a-c">
+      <div id="section-sobre">
+        <h2 class="title">Quem sou eu ?</h2>
+        <p>
+          Olá! Me chamo Gabriel, tenho 20 anos e estou no meu 2º semestre de
+          Análise e Desenvolvimento de Sistemas. Atualmente, tenho experiência
+          em projetos acadêmicos e pessoais, onde pude aplicar meus
+          conhecimentos em HTML, CSS e JavaScript, estou em processo de
+          desenvolviment e no futuro desejo me tornar um Full Stack Developer.
+          Logo abaixo, você poderá ver alguns dos meus projetos e as respectivas
+          tecnologias utilizadas.
+        </p>
+
+        <p class="p-case">
+          Caso queira saber um pouco mais sobre mim, confira o meu currículo
+          logo abaixo.
+        </p>
+
+        <nav class="nav-div">
+          <a target="_blank" href="https://drive.google.com/file/d/1wvgKcT2o9D_gKFciEuIVyeYs-O9R8VZm/view?usp=sharing">
+            <button class="btn-my">
+              <i class="fa-regular fa-file-pdf"></i>Meu Currículo
+            </button>
+          </a>
+
+          <a href="#projeto">
+            <button class="btn-my">
+              <i class="fa-solid fa-magnifying-glass"></i>Meus projetos
+            </button>
+          </a>
+        </nav>
+      </div>
+
+      <div id="conhecimentos" class="section-conhecimentos">
+        <h3 class="title">Conhecimentos</h3>
+
+        <div class="grid-images">
+          <img src="./img/html.png" alt="" />
+          <img src="./img/css.png" alt="" />
+          <img src="./img/javascript.png" alt="" />
+          <img src="./img/git-logo.png" alt="" />
+          <img id="nod" src="./img/tailwind-logo.png" alt="" />
+          <img id="react" src="./img/react-logo.png" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section id="projeto" class="section-projetos">
+      <h4 class="title">Meus Projetos</h4>
+
+      <div class="container-project">
+        <div>
+          <div class="mimic-div">
+            <a
+              target="_blank"
+              href="https://gabrielvrodriguez.github.io/Login-Page/"
+              ><img src="./img/Captura de tela 2023-06-12 171535.png" alt=""
+            /></a>
+          </div>
+          <div class="mimic-div">
+            <a
+              target="_blank"
+              href="https://gabrielvrodriguez.github.io/Calculadora-IMC/"
+            >
+              <img src="./img/Captura de tela 2023-06-12 171358.png" alt="" />
+            </a>
+          </div>
+        </div>
+        <div>
+          <div class="mimic-div">
+            <img src="./img/loading-img.jpg" alt="" />
+          </div>
+          <div class="mimic-div">
+            <img src="./img/loading-img.jpg" alt="" />
+          </div>
+      </div>
+    </section>
+
+     <section class="section-contato">
+      <div class="section-contato-text">
+        <h5 id="contato" class="title">Contate-me</h5>
         <p>Gostou do que viu?!</p>
-        <p>Fique a vontade para me mandar uma mensagem!</p>
-    </div>
-
-    <form class="section-form">
-      <div class="contato-first">
-        <input type="name" placeholder="Nome" />
-        <input type="email" placeholder="E-mail" />
+        <p>Fique a vontade para me contatar em minhas redes sociais!</p>
       </div>
 
-      <div>
-        <input type="text" placeholder="Assunto" />
-        <input type="text" placeholder="Mensagem" />
-      </div>
-    </form>
+      <nav class="icon">
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/gabriel-rodriguez-92567b260/"
+          ><i class="fa-brands fa-linkedin" id="midias"></i
+        ></a>
+        <a target="_blank" href="https://wa.me/13991498176"
+          ><i class="fa-brands fa-whatsapp" id="midias"></i
+        ></a>
+        <a target="_blank" href="https://github.com/gabrielVrodriguez"
+          ><i class="fa-brands fa-github" id="midias"></i
+        ></a>
+      </nav>
 
-    <button><i class="fa-solid fa-paper-plane"></i>Enviar Mensagem</button>
-    <button><i class="fa-solid fa-trash-can"></i>Limpar</button>
-  </section>
+      
+    </section>
 
-  <footer>
-    <p>
-      <i class="fa-regular fa-copyright"></i>Desenvolvido por Gabriel
-      Rodriguez <i class="fa-solid fa-ghost"></i>
-    </p>
-  </footer>
-  <script src="main.js"></script>
-</body>
-
+    <footer>
+      <p>
+        <i class="fa-regular fa-copyright"></i>Desenvolvido por Gabriel
+        Rodriguez <i class="fa-solid fa-ghost"></i>
+      </p>
+    </footer>
+    <script src="main.js"></script>
+  </body>
 </html>

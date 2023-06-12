@@ -8,18 +8,27 @@
   scroll-behavior: smooth;
 }
 
+body {
+  background-color: rgb(218, 217, 235);
+  width: 100%;
+}
+
+body a {
+  list-style: none;
+  text-decoration: none;
+}
+
 .header-container {
   width: 100%;
   height: 2.5em;
   display: flex;
   position: fixed;
+  justify-content: space-around;
   top: 0;
-  justify-content: space-between;
   align-items: center;
   background-color: rgb(17, 112, 221);
-}
-
-.header-nav {
+  z-index: 1000;
+  border-bottom: 1px solid white;
 }
 
 #btn-mobile {
@@ -27,7 +36,8 @@
 }
 
 .header-logo {
-  margin-left: 1em;
+  width: 20%;
+  margin-left: 2em;
 }
 
 .header-logo i {
@@ -42,8 +52,6 @@
 }
 
 .header-ul a {
-  list-style: none;
-  text-decoration: none;
   font-size: 5em;
   padding-right: 3em;
   color: rgb(255, 255, 255);
@@ -56,17 +64,19 @@
   color: black;
 }
 
-/*ARRUMAR A HEADER - RESPONSIDIVDADE*/
-
 main {
-  border: 1px solid rgb(238, 230, 230);
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  padding-top: 5em;
 }
 
 main img {
-  width: 12em;
+  width: 15em;
   border-radius: 50%;
   margin: 4em auto 1em;
   display: block;
+  border: 3px solid rgb(255, 255, 255);
 }
 
 .main-text {
@@ -79,13 +89,14 @@ main img {
   padding-bottom: 0.5em;
 }
 
-h1 {
-  font-size: 1.8em;
+.title {
+  font-size: 2em;
+  color: rgb(17, 112, 221);
+  text-align: center;
 }
 
 .str {
-  color: rgb(17, 112, 221);
-  font-size: 1.3em;
+  font-size: 1.4em;
 }
 
 #p-two {
@@ -95,32 +106,41 @@ h1 {
 
 main button {
   width: 50%;
-  height: 3em;
+}
+
+main button,
+.btn-my {
+  min-height: 3em;
   margin: 0 auto;
+  margin-top: 1.5em;
   display: block;
   font-size: 1.1em;
   background-color: rgb(17, 112, 221);
   border-radius: 0.7em;
-  border: 1px transparent;
+  border: solid transparent;
   text-align: center;
   color: rgb(255, 255, 255);
   cursor: pointer;
 }
 
-main button:hover {
+main button:hover,
+.btn-my:hover,
+.send:hover {
   background-color: rgb(70, 144, 228);
+  transform: translateY(-2px);
+  transition: 0.3s;
 }
 
-main a {
-  list-style: none;
-  text-decoration: none;
+.trash:hover {
+  background-color: red;
+  transform: translateY(-2px);
+  transition: 0.3s;
 }
 
 .icon {
   font-size: 2em;
   text-align: center;
   margin: 2em 0 8em 0.5em;
-  text-decoration: none;
 }
 
 .icon a:active {
@@ -138,7 +158,7 @@ main a {
 .fa-whatsapp {
   border: 1px solid transparent;
   border-radius: 0.1em;
-  background-color: rgb(245, 238, 238);
+  background-color: rgb(218, 217, 235);
   transition: 0.5s;
 }
 
@@ -156,22 +176,26 @@ main a {
   background-color: rgb(148, 233, 20);
   transform: scale(1.1);
 }
-/*COLOCAR LINKS NOS NAVS E FIM DO MAIN*/
 
-#section-sobre {
-  padding: 5.5em 2em;
-  border: 1px solid rgb(238, 230, 230);
-  text-align: justify;
+.section-a-c {
+  display: flex;
+  width: 100%;
+}
+
+#section-sobre,
+.section-conhecimentos {
+  padding: 2em 2em;
+  width: 50%;
+  border-top: 1px solid gray;
+  margin-top: 2em;
 }
 
 #section-sobre h2 {
   margin-bottom: 1.2em;
-  color: rgb(17, 112, 221);
-  font-size: 2em;
   text-align: center;
 }
 
-h2::after {
+.title::after {
   content: "";
   display: block;
   width: 5em;
@@ -189,57 +213,195 @@ h2::after {
   padding: 0.9em 0;
 }
 
-.btn-div {
-  width: 100%;
+.nav-div {
+  width: 50%;
   height: 8em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin: 0 auto;
+  display: block;
 }
 
 .btn-my {
-  width: 70%;
-  height: 3em;
-  margin-top: 1em;
-  border-radius: 0.5em;
-  border: 1px solid white;
-  background-color: rgb(17, 112, 221);
-  color: white;
-  font-size: 15px;
+  width: 100%;
 }
 
 .btn-my i {
-  padding-right: 5px;
+  padding: 1em;
+}
+
+a .btn-my {
+  font-size: 1em;
+  text-transform: uppercase;
 }
 
 .section-conhecimentos {
   overflow: auto;
 }
 
-.section-conhecimentos img {
+#section-sobre {
+  text-align: justify;
 }
 
-.art1 {
-  float: left;
-  width: 33%;
+#section-sobre h2 {
+  margin-bottom: 1.2em;
+  text-align: center;
 }
 
-@media (max-width: 720px) {
+#section-sobre p {
+  font-size: 1.3em;
+}
+
+.p-case {
+  padding: 0.9em 0;
+}
+
+.grid-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.grid-images img {
+  width: 8em;
+  padding: 0.5em;
+  margin: 4em auto 0.5em;
+  margin-right: 3em;
+  display: block;
+  border-radius: 1em;
+  cursor: pointer;
+  transition: 0.7s;
+}
+
+.grid-images img:hover {
+  transform: scale(1.1);
+  background-color: rgb(53, 54, 56);
+  border: transparent;
+}
+
+.section-projetos {
+  margin-top: 7em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  overflow: auto;
+}
+
+.container-project {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.section-projetos h4 {
+  margin-bottom: 1em;
+}
+
+.mimic-div {
+  border: 1px solid transparent;
+  height: 17em;
+  width: 22em;
+  margin-bottom: 20px;
+  transition: 0.3s linear;
+}
+
+.mimic-div img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1em;
+  border: 1px solid white;
+  opacity: 0.8;
+}
+
+.mimic-div img:hover {
+  opacity: 1;
+}
+
+.mimic-div:hover {
+  transform: scale(1.05);
+}
+
+.mimic-loading {
+  border: 1px solid black;
+  text-align: center;
+}
+
+/* contato */
+
+.section-contato {
+  width: 100%;
+  margin-top: 10em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(187, 186, 212);
+}
+
+.section-contato h5 {
+  margin: 2.5em 0 1em 0;
+}
+
+.section-contato-text {
+  text-align: center;
+  color: rgb(7, 7, 7);
+  margin-bottom: 4em;
+}
+
+.section-contato-text p {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+#midias {
+  height: 1.5em;
+  width: 2em;
+  font-size: 1.5em;
+  text-align: center;
+  border: 1px transparent;
+}
+
+#midias:hover {
+  box-shadow: 2px 2px rgb(0, 0, 0);
+}
+/*Footer*/
+footer p {
+  font-size: 1em;
+  text-align: center;
+  padding: 1em;
+}
+
+footer i {
+  padding-right: 0.5em;
+}
+
+@media (max-width: 800px) {
+  .header-container {
+    justify-content: space-between;
+  }
+
   .header-ul {
     display: block;
+    margin-top: 3px;
     position: absolute;
-    width: 100%;
+    text-align: center;
+    width: 50%;
     height: 0;
-    top: 12em;
+    top: 95%;
+    right: 0;
     background-color: rgb(17, 112, 221);
     z-index: 1000;
     transition: linear 0.5s;
-    visibility: hidden;
     overflow-y: hidden;
   }
 
+  .header-ul li {
+    border-bottom: 1px solid white;
+  }
+
   .header-nav.active .header-ul {
-    height: 100vh;
-    visibility: visible;
-    overflow-y: auto;
+    height: 49vh;
   }
 
   .header-ul a {
@@ -286,5 +448,68 @@ h2::after {
     transform: rotate(-135deg);
     top: 7px;
     transition: 0.2s;
+  }
+
+  main {
+    flex-direction: column-reverse;
+  }
+
+  .grid-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1em;
+  }
+
+  .mimic-div {
+    width: 13em;
+    height: 12em;
+  }
+}
+
+@media (max-width: 455px) {
+  .grid-images img {
+    width: 7.4em;
+    gap: 2em;
+  }
+
+  .mimic-div {
+    width: 8em;
+    height: 8em;
+  }
+}
+
+@media (max-width: 450px) {
+  .grid-images img {
+    width: 6em;
+  }
+
+  .section-form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contato-first input {
+    width: 94%;
+  }
+
+  .section-contato .icon {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 1000px) {
+  .section-a-c {
+    flex-direction: column;
+  }
+
+  #section-sobre {
+    width: 100%;
+    margin-bottom: 5em;
+  }
+
+  .section-conhecimentos {
+    width: 100%;
+    margin-bottom: 5em;
   }
 }
