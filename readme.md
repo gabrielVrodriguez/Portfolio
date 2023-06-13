@@ -24,7 +24,7 @@ Esse projeto trata-se do meu primeiro portfólio pessoal, com foco em mostrar al
 </div>
 
 ## :link: Deploy
-
+ https://gabrielvrodriguez.github.io/Portfolio/
 ```
 
 ```
