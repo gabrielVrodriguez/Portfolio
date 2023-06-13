@@ -1,4 +1,4 @@
-![IMAGEM ILUSTRATIVA](![Captura de tela 2023-06-12 210538](https://github.com/gabrielVrodriguez/Portfolio/assets/121834753/ce2d5ef4-52a2-429d-b467-d449f6db9881)
+(![Captura de tela 2023-06-12 210538](https://github.com/gabrielVrodriguez/Portfolio/assets/121834753/ce2d5ef4-52a2-429d-b467-d449f6db9881)
 )
 
 <h1 align="center">
